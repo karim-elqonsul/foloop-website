@@ -17,7 +17,7 @@ Run `node scripts/check-growth.mjs` to validate report calculations, invalid inp
 ## Included
 
 - Arabic and English, RTL layouts and a saved language preference
-- An interactive hero with CRM, inbox and automation views
+- An autoplaying hero with CRM, inbox and automation views, gradual messages, explicit pause and visibility-aware playback
 - A conversation journey controlled with the mouse, four steps, keyboard slider and play/pause
 - A moving rail of colored social logos and an interactive view explaining a connected workspace
 - Twenty-two feature scopes, eight business sectors and a searchable library of thirty-six ecosystem logos
@@ -54,6 +54,8 @@ The report uses visitor-entered figures from one reporting period. It calculates
 - Billing and add-on preferences retained in session storage during navigation
 - Customer-story section prepared for real client data; currently clearly marked as awaiting names, logos and publishable evidence
 
-Run `node scripts/check-journey.mjs` for autoplay, visibility and manual-control checks
+Run `node scripts/check-journey.mjs` for conversation autoplay, visibility and manual-control checks
+
+Run `node scripts/check-hero.mjs` for hero autoplay, view cycling, pause, visibility and reduced motion checks
 
 Additional logo sources: Clio official developer button bundle; Printful official Brand Center logo pack; Wave official SVG; Shippo official favicon; Authorize.net official favicon; Simple Icons Google My Business/QuickBooks; Iconify Logos Xero
