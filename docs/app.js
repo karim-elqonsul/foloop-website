@@ -107,7 +107,7 @@ function bindEvents(){
  if(b.dataset.action==='pause-integrations'){const rail=document.querySelector('.integration-logo-rail');rail.classList.toggle('paused');const paused=rail.classList.contains('paused');b.setAttribute('aria-pressed',paused);b.innerHTML=icon(paused?'play':'pause')+(paused?t('Resume logo movement','تشغيل حركة الشعارات'):t('Pause logo movement','إيقاف حركة الشعارات'));return}
  if(b.dataset.toggleAddon!==undefined){toggleAddon(Number(b.dataset.toggleAddon));return}
  if(b.dataset.footerFeature!==undefined){e.preventDefault();showFeature(Number(b.dataset.footerFeature));return}
- if(b.dataset.heroMode){heroMode=b.dataset.heroMode;updateHero();return}
+ if(b.dataset.heroMode){stopHeroDemo();heroMode=b.dataset.heroMode;heroStage=0;updateHero();return}
  if(b.dataset.heroStage!==undefined){stopHeroDemo();heroStage=Number(b.dataset.heroStage);updateHero();return}
  if(b.dataset.narrative){narrative=b.dataset.narrative;document.querySelectorAll('[data-narrative]').forEach(x=>{x.classList.toggle('active',x.dataset.narrative===narrative);x.setAttribute('aria-pressed',x.dataset.narrative===narrative)});updateJourney(0);return}
  if(b.dataset.featureFilter){featureFilter=b.dataset.featureFilter;document.querySelectorAll('[data-feature-filter]').forEach(x=>{x.classList.toggle('active',x.dataset.featureFilter===featureFilter);x.setAttribute('aria-pressed',x.dataset.featureFilter===featureFilter)});document.getElementById('feature-grid').innerHTML=featureGrid();return}
